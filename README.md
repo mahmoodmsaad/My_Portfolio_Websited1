@@ -2,6 +2,10 @@
 
 This repository contains a single-page portfolio tailored for your computational chemistry research profile. It is built with vanilla HTML, CSS, and JavaScript so you can host it easily on GitHub Pages and edit it directly from the browser.
 
+## 🚀 Quick Start: Fix "Page Not Found" Error
+
+If you're seeing a "Page Not Found" error, follow the simple instructions in **[SETUP_GITHUB_PAGES.md](SETUP_GITHUB_PAGES.md)** to enable GitHub Pages with GitHub Actions. It takes just 2 minutes!
+
 ## Project Structure
 
 - `index.html` – main page layout and content
@@ -19,8 +23,21 @@ This repository contains a single-page portfolio tailored for your computational
 
 ## Deploying to GitHub Pages
 
-1. Create a new **private** GitHub repository (for example, `saad-portfolio`).
-2. Copy the project files into the repository root (`index.html`, `styles.css`, `script.js`, `assets/`, `README.md`).
+### For This Repository (Recommended - Using GitHub Actions):
+
+This repository is already configured with automatic GitHub Pages deployment! Just follow these steps:
+
+1. Go to repository **Settings** → **Pages**
+2. Under **"Build and deployment"**, set **Source** to **"GitHub Actions"**
+3. Merge any pending pull requests
+4. Your site will be live at: `https://mahmoodmsaad.github.io/My_Portfolio_Websited1/`
+
+See **[SETUP_GITHUB_PAGES.md](SETUP_GITHUB_PAGES.md)** for detailed instructions.
+
+### For a New Repository (Alternative Method):
+
+1. Create a new **public** GitHub repository (Private repos need GitHub Pro for Pages)
+2. Copy the project files into the repository root
 3. Commit and push:
    ```bash
    git add .
@@ -28,13 +45,9 @@ This repository contains a single-page portfolio tailored for your computational
    git push origin main
    ```
 4. In the repository settings:
-   - Open **Pages**.
-   - Under **Build and deployment**, choose **Deploy from a branch**.
-   - Select the `main` branch and the `/ (root)` folder.
-   - Save. GitHub will publish the site at `https://<your-username>.github.io/<repository-name>/`.
-5. Optional: add a custom domain in the same **Pages** settings section.
-
-Because the repository is private, only you can push changes. GitHub Pages will still host the public site, while editing rights remain yours.
+   - Open **Pages**
+   - Under **Build and deployment**, choose **"GitHub Actions"**
+   - The site will automatically deploy at `https://<your-username>.github.io/<repository-name>/`
 
 ## Editing Content in the Browser
 
