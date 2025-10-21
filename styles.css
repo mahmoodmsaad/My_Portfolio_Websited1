@@ -107,6 +107,32 @@ ul, ol {
     color: var(--color-accent);
 }
 
+.edit-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--color-muted);
+    transition: all 0.2s ease;
+}
+
+.edit-toggle:hover {
+    background: rgba(59, 96, 246, 0.08);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.edit-mode .edit-toggle {
+    background: var(--color-accent);
+    color: #ffffff;
+    border-color: var(--color-accent);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -674,6 +700,60 @@ textarea:focus {
     }
 }
 
+/* Edit mode styles */
+.edit-mode [contenteditable="true"] {
+    outline: 2px dashed rgba(59, 96, 246, 0.5);
+    outline-offset: 4px;
+    padding: 4px;
+    border-radius: 4px;
+    transition: outline 0.2s ease;
+}
+
+.edit-mode [contenteditable="true"]:hover {
+    outline-color: var(--color-accent);
+    background: rgba(59, 96, 246, 0.03);
+}
+
+.edit-mode [contenteditable="true"]:focus {
+    outline: 2px solid var(--color-accent);
+    background: rgba(59, 96, 246, 0.05);
+}
+
+.edit-mode-banner {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+    background: var(--color-accent);
+    color: #ffffff;
+    padding: 16px 24px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-hard);
+    font-weight: 600;
+    display: none;
+    gap: 12px;
+    align-items: center;
+}
+
+.edit-mode .edit-mode-banner {
+    display: flex;
+}
+
+.save-btn {
+    background: #ffffff;
+    color: var(--color-accent);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
     .hero {
         padding-bottom: 80px;
@@ -696,6 +776,13 @@ textarea:focus {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .edit-mode-banner {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        justify-content: space-between;
     }
 
     .hero-actions {
