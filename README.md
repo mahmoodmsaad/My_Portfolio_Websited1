@@ -2,6 +2,12 @@
 
 This repository contains a single-page portfolio tailored for your computational chemistry research profile. It is built with vanilla HTML, CSS, and JavaScript so you can host it easily on GitHub Pages and edit it directly from the browser.
 
+## 🌐 Live Site
+
+**Live URL**: https://mahmoodmsaad.github.io/My_Portfolio_Websited1/
+
+> **Note**: If the site is not yet accessible, you need to complete the one-time GitHub Pages setup. See [SETUP_GITHUB_PAGES.md](SETUP_GITHUB_PAGES.md) for instructions.
+
 ## Project Structure
 
 - `index.html` – main page layout and content
@@ -19,22 +25,33 @@ This repository contains a single-page portfolio tailored for your computational
 
 ## Deploying to GitHub Pages
 
-1. Create a new **private** GitHub repository (for example, `saad-portfolio`).
-2. Copy the project files into the repository root (`index.html`, `styles.css`, `script.js`, `assets/`, `README.md`).
-3. Commit and push:
-   ```bash
-   git add .
-   git commit -m "Add portfolio site"
-   git push origin main
-   ```
-4. In the repository settings:
-   - Open **Pages**.
-   - Under **Build and deployment**, choose **Deploy from a branch**.
-   - Select the `main` branch and the `/ (root)` folder.
-   - Save. GitHub will publish the site at `https://<your-username>.github.io/<repository-name>/`.
-5. Optional: add a custom domain in the same **Pages** settings section.
+**Automatic Deployment is Already Configured!** 🎉
 
-Because the repository is private, only you can push changes. GitHub Pages will still host the public site, while editing rights remain yours.
+This repository is set up with GitHub Actions for automatic deployment. Every push to the `main` branch automatically deploys your site to GitHub Pages.
+
+### First-Time Setup (Owner Only)
+
+The repository owner needs to enable GitHub Pages once:
+
+1. Go to [Repository Settings → Pages](https://github.com/mahmoodmsaad/My_Portfolio_Websited1/settings/pages)
+2. Under "Build and deployment", set **Source** to **"GitHub Actions"**
+3. Save and wait 1-2 minutes
+
+**That's it!** Your site will be live at: `https://mahmoodmsaad.github.io/My_Portfolio_Websited1/`
+
+For detailed instructions, see [SETUP_GITHUB_PAGES.md](SETUP_GITHUB_PAGES.md).
+
+### Updating Your Site
+
+Simply commit and push changes to the `main` branch:
+
+```bash
+git add .
+git commit -m "Update content"
+git push origin main
+```
+
+GitHub Actions will automatically rebuild and redeploy your site within 1-2 minutes.
 
 ## Editing Content in the Browser
 
