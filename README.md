@@ -2,6 +2,12 @@
 
 This repository contains a single-page portfolio tailored for your computational chemistry research profile. It is built with vanilla HTML, CSS, and JavaScript so you can host it easily on GitHub Pages and edit it directly from the browser.
 
+## 🌐 Live Website
+
+Visit the live portfolio at: **https://mahmoodmsaad.github.io/My_Portfolio_Websited1/**
+
+The website is automatically deployed to GitHub Pages whenever changes are pushed to the `main` branch.
+
 ## Project Structure
 
 - `index.html` – main page layout and content
@@ -19,22 +25,21 @@ This repository contains a single-page portfolio tailored for your computational
 
 ## Deploying to GitHub Pages
 
-1. Create a new **private** GitHub repository (for example, `saad-portfolio`).
-2. Copy the project files into the repository root (`index.html`, `styles.css`, `script.js`, `assets/`, `README.md`).
-3. Commit and push:
-   ```bash
-   git add .
-   git commit -m "Add portfolio site"
-   git push origin main
-   ```
-4. In the repository settings:
-   - Open **Pages**.
-   - Under **Build and deployment**, choose **Deploy from a branch**.
-   - Select the `main` branch and the `/ (root)` folder.
-   - Save. GitHub will publish the site at `https://<your-username>.github.io/<repository-name>/`.
-5. Optional: add a custom domain in the same **Pages** settings section.
+This repository is already configured with GitHub Actions for automatic deployment to GitHub Pages.
 
-Because the repository is private, only you can push changes. GitHub Pages will still host the public site, while editing rights remain yours.
+### How it works:
+1. When you push changes to the `main` branch, GitHub Actions automatically deploys the site
+2. The workflow file (`.github/workflows/deploy.yml`) handles the deployment process
+3. The site is published at `https://mahmoodmsaad.github.io/My_Portfolio_Websited1/`
+
+### Manual deployment:
+You can also trigger a manual deployment:
+1. Go to the repository on GitHub
+2. Click the **Actions** tab
+3. Select the **Deploy to GitHub Pages** workflow
+4. Click **Run workflow**
+
+No additional setup is required - GitHub Pages is automatically configured through the workflow.
 
 ## Editing Content in the Browser
 
